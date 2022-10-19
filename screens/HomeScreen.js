@@ -1,7 +1,7 @@
-import { View, FlatList } from "react-native";
+import { View, FlatList, StyleSheet, StatusBar } from "react-native";
 import Header from '../components/HomeScreen/Header';
 import Post from '../components/HomeScreen/Post';
-import { POST_DATA } from "../components/constants";
+import { COLORS, POST_DATA } from "../components/constants";
 import { useEffect, useState } from "react";
 import { getHomeFeedData } from "../services/requests";
 function HomeScreen() {
@@ -16,7 +16,7 @@ function HomeScreen() {
         getData();
     },[]);
     return (
-        <View>
+        <View style={styles.container}>
             <Header />
             <FlatList
                 data={feedArray}
@@ -25,8 +25,16 @@ function HomeScreen() {
                 )}
                 keyExtractor={(item, index) => index}
             />
+<StatusBar backgroundColor={COLORS.primary}  />
+
         </View>
     );
 }
-
+const styles = StyleSheet.create({
+    container:{
+        flex: 1,
+    // marginTop: StatusBar.currentHeight,
+    backgroundColor: COLORS.secondary,
+    }
+})
 export default HomeScreen;
