@@ -2,7 +2,9 @@ import axios from 'axios';
 
 const getHomeFeedData = async function(){
     try{
-        const response = axios.get("https://server.mintflick.app/feed");
+        const response = await axios.get("https://server.mintflick.app/feed");
+        // const d1 =  response.json();
+        // console.log(response.data);
         return response.data;
     }
     catch(err){

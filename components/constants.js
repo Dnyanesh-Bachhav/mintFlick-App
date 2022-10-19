@@ -12,6 +12,8 @@ const COLORS = {
     secondary: "#1e293b",
     white: "#fff",
     gray: "#94a3b8",
+    black: "#000",
+    grayWhite: "#c5cedd",
 }
 const POST_DATA = [
     {
