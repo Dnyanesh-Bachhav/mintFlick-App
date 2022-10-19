@@ -1,5 +1,4 @@
 import { StyleSheet, Text, View, Image, Dimensions } from "react-native";
-import user from "../../assets/Dnyanesh_Bachhav_Circular.png";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -26,26 +25,26 @@ function PostDetails({item}){
         </View>
     );
 }
-function PostActions(){
+function PostActions({item}){
     return(
         <View style={styles.actionContainer}>
             {/* import { FontAwesome } from '@expo/vector-icons'; */}
-            <View style={styles.action}><FontAwesome name="heart" size={20} color="red" /><Text style={styles.counterTextStyle}>5</Text></View>
+            <View style={styles.action}><FontAwesome name="heart" size={20} color="red" /><Text style={styles.counterTextStyle}>{item.likeCount}</Text></View>
             {/* <View><FontAwesome name="heart-o" size={20} color="black" /></View> */}
-            <View style={{...styles.action,marginLeft: 15}}><FontAwesome5 name="comment-dots" size={20} color={COLORS.white} /><Text style={styles.counterTextStyle}>5</Text></View>
+            <View style={{...styles.action,marginLeft: 15}}><FontAwesome5 name="comment-dots" size={20} color={COLORS.white} /><Text style={styles.counterTextStyle}>{item.commentCount}</Text></View>
             <View style={{...styles.action,marginLeft: 15}}><Feather name="share-2" size={20} color={COLORS.white} /></View>
         </View>
     );
 }
-function PostInfo(){
+function PostInfo({item}){
     return(
         <View style={styles.postContainer}>
             <View style={{flexDirection: 'row',alignItems: 'center'}} >
 
-                <View style={styles.imgContainer}><Image source={user} style={styles.imgStyle}  /></View>
+                <View style={styles.imgContainer}><Image source={item.userDP} style={styles.imgStyle}  /></View>
                 <View style={styles.userInfo}>
-                    <Text style={{color: COLORS.white,fontWeight: 'bold',fontSize: 15}}>Dnyanesh_07</Text>
-                    <Text style={{color: COLORS.gray,fontSize: 12}}>7 days ago</Text>
+                    <Text style={{color: COLORS.white,fontWeight: 'bold',fontSize: 15}}>{item.username}</Text>
+                    <Text style={{color: COLORS.gray,fontSize: 12}}>{item.timestamp}</Text>
                 </View>
             </View>
             <View style={{ alignSelf: 'center'}} ><MaterialCommunityIcons name="dots-vertical" size={24} color={COLORS.white}/></View>
