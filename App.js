@@ -27,22 +27,66 @@ export default function App() {
             headerShown: false,
             tabBarIcon: ({focused})=>(
               <View style={styles.tabOption}>
-                <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.tabOption}>
-
+                {
+                  focused ? 
+                
+                <LinearGradient colors={['#a36cfc', '#3b5998', '#2ce8e5']} start={{ x: 0.1,y:2 }} style={styles.gradientStyle}>
                   <Image source={require("./assets/Home.png")} style={{
-                    tintColor: COLORS.white,
-                    ...styles.imgStyle}}/>
+                  tintColor: COLORS.white,
+                  ...styles.imgStyle}}/>
+                 
                   {/* <Text style={{color: COLORS.white}} >Home</Text> */}
                 </LinearGradient>
+                :  <Image source={require("./assets/Home.png")} style={{
+                  tintColor: COLORS.white,
+                  ...styles.imgStyle}}/>
+                }
               </View>
           )
       
           }} />
           <Tab.Screen name="Live" component={LivesScreen} options={{
+            tabBarIcon: ({focused})=>(
+              <View style={styles.tabOption}>
+                {
+                  focused ? 
+                
+                <LinearGradient colors={['#a36cfc', '#3b5998', '#2ce8e5']} start={{ x: 1,y:0.2 }} style={styles.gradientStyle}>
+
+                  <Image source={require("./assets/live.png")} style={{
+                    tintColor: COLORS.white,
+                    ...styles.imgStyle}}/>
+                  {/* <Text style={{color: COLORS.white}} >Home</Text> */}
+                </LinearGradient>
+                : <Image source={require("./assets/live.png")} style={{
+                  tintColor: COLORS.white,
+                  ...styles.imgStyle}}/>
+                }
+              </View>
+          ),
+      
             headerShown: false
           }} />
           <Tab.Screen name="Market" component={MarketScreen} options={{
-            headerShown: false
+            headerShown: false,
+            tabBarIcon: ({focused})=>(
+              <View style={styles.tabOption}>
+                {
+                  focused ? 
+                <LinearGradient colors={['#a36cfc', '#3b5998', '#2ce8e5']} start={{ x: 1,y:0.2 }} style={styles.gradientStyle}>
+
+                  <Image source={require("./assets/party.png")} style={{
+                    tintColor: COLORS.white,
+                    ...styles.imgStyle}}/>
+                  {/* <Text style={{color: COLORS.white}} >Home</Text> */}
+                </LinearGradient>
+                : <Image source={require("./assets/party.png")} style={{
+                  tintColor: COLORS.white,
+                  ...styles.imgStyle}}/>
+                }
+              </View>
+          )
+      
           }} />
         </Tab.Navigator>
       </NavigationContainer>
@@ -63,8 +107,10 @@ const styles = StyleSheet.create({
   tabOption:{
     justifyContent: 'center',
     alignItems: 'center',
-    paddingLeft: 15,
-    paddingRight: 15,
-    borderRadius: 5
+},
+gradientStyle:{
+  paddingVertical: 8,
+  paddingHorizontal: 15,
+  borderRadius: 5
 }
 });
