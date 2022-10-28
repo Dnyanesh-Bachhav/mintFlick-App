@@ -7,6 +7,8 @@ import { COLORS, POST_DATA } from './components/constants';
 import HomeScreen from './screens/HomeScreen';
 import LivesScreen from './screens/LivesScreen';
 import MarketScreen from './screens/MarketScreen';
+import NotificationScreen from './screens/NotificationScreen';
+import SearchScreen from './screens/SearchScreen';
 
 
 export default function App() {
@@ -68,6 +70,48 @@ export default function App() {
             headerShown: false
           }} />
           <Tab.Screen name="Market" component={MarketScreen} options={{
+            headerShown: false,
+            tabBarIcon: ({focused})=>(
+              <View style={styles.tabOption}>
+                {
+                  focused ? 
+                <LinearGradient colors={['#a36cfc', '#3b5998', '#2ce8e5']} start={{ x: 1,y:0.2 }} style={styles.gradientStyle}>
+
+                  <Image source={require("./assets/party.png")} style={{
+                    tintColor: COLORS.white,
+                    ...styles.imgStyle}}/>
+                  {/* <Text style={{color: COLORS.white}} >Home</Text> */}
+                </LinearGradient>
+                : <Image source={require("./assets/party.png")} style={{
+                  tintColor: COLORS.white,
+                  ...styles.imgStyle}}/>
+                }
+              </View>
+          )
+      
+          }} />
+          <Tab.Screen name="Search" component={SearchScreen} options={{
+            headerShown: false,
+            tabBarIcon: ({focused})=>(
+              <View style={styles.tabOption}>
+                {
+                  focused ? 
+                <LinearGradient colors={['#a36cfc', '#3b5998', '#2ce8e5']} start={{ x: 1,y:0.2 }} style={styles.gradientStyle}>
+
+                  <Image source={require("./assets/party.png")} style={{
+                    tintColor: COLORS.white,
+                    ...styles.imgStyle}}/>
+                  {/* <Text style={{color: COLORS.white}} >Home</Text> */}
+                </LinearGradient>
+                : <Image source={require("./assets/party.png")} style={{
+                  tintColor: COLORS.white,
+                  ...styles.imgStyle}}/>
+                }
+              </View>
+          )
+      
+          }} />
+          <Tab.Screen name="Notification" component={NotificationScreen} options={{
             headerShown: false,
             tabBarIcon: ({focused})=>(
               <View style={styles.tabOption}>
