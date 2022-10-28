@@ -98,12 +98,12 @@ export default function App() {
                   focused ? 
                 <LinearGradient colors={['#a36cfc', '#3b5998', '#2ce8e5']} start={{ x: 1,y:0.2 }} style={styles.gradientStyle}>
 
-                  <Image source={require("./assets/party.png")} style={{
+                  <Image source={require("./assets/search.png")} style={{
                     tintColor: COLORS.white,
                     ...styles.imgStyle}}/>
                   {/* <Text style={{color: COLORS.white}} >Home</Text> */}
                 </LinearGradient>
-                : <Image source={require("./assets/party.png")} style={{
+                : <Image source={require("./assets/search.png")} style={{
                   tintColor: COLORS.white,
                   ...styles.imgStyle}}/>
                 }
@@ -119,12 +119,12 @@ export default function App() {
                   focused ? 
                 <LinearGradient colors={['#a36cfc', '#3b5998', '#2ce8e5']} start={{ x: 1,y:0.2 }} style={styles.gradientStyle}>
 
-                  <Image source={require("./assets/party.png")} style={{
+                  <Image source={require("./assets/notification.png")} style={{
                     tintColor: COLORS.white,
                     ...styles.imgStyle}}/>
                   {/* <Text style={{color: COLORS.white}} >Home</Text> */}
                 </LinearGradient>
-                : <Image source={require("./assets/party.png")} style={{
+                : <Image source={require("./assets/notification.png")} style={{
                   tintColor: COLORS.white,
                   ...styles.imgStyle}}/>
                 }
