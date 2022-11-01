@@ -3,8 +3,11 @@ import { COLORS } from "../components/constants";
 
 function MarketScreen(){
     return(
-        <View style={styles.container}>
+        <View className="h-screen bg-alt bg-gradient-to-t from-blue-400 to-red-400">
             <Text style={{fontSize: 25,color: COLORS.white}}>Market</Text>
+            <View className="p-5 bg-gradient-to-tr from-slate-600 to-red-400">
+                <Text>Small BTN</Text>
+            </View>
         </View>
     );
 }

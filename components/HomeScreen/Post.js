@@ -20,9 +20,9 @@ function PostDetails({item}){
     const video = useRef(null);
     const videoExtensions = ['.mp4','.ogg'];
     const[status,setStatus] = useState({});
-    const extension = item.content.link.split(".")[1];
+    const extension = item?.content?.link?.split(".")[1];
     function checkIsVideo(){
-        if(item.content.link.includes(extension))
+        if(item?.content?.link?.includes(extension))
         {
             return true;
         }
@@ -70,7 +70,7 @@ function PostActions({item}){
     return(
         <View style={styles.actionContainer}>
             {/* import { FontAwesome } from '@expo/vector-icons'; */}
-            <View style={styles.action}><FontAwesome name="heart" size={20} color="red" /><Text style={styles.counterTextStyle}>{item.content.likes.length}</Text></View>
+            <View style={styles.action}><FontAwesome name="heart" size={20} color="red" /><Text style={styles.counterTextStyle}>{item?.content?.likes?.length}</Text></View>
             {/* <View><FontAwesome name="heart-o" size={20} color="black" /></View> */}
             <View style={{...styles.action,marginLeft: 15}}><FontAwesome5 name="comment-dots" size={20} color={COLORS.white} /><Text style={styles.counterTextStyle}>{ item.content.comments != null ? item.content.comments.length : 0 }</Text></View>
             <View style={{...styles.action,marginLeft: 15}}><Feather name="share-2" size={20} color={COLORS.white} /></View>
