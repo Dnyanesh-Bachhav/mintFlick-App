@@ -1,9 +1,11 @@
 import { Text, View, StyleSheet } from "react-native";
 import { COLORS } from "../components/constants";
+import Header from "../components/LiveScreen/Header";
 
 function LivesScreen(){
     return(
         <View style={styles.container}>
+            <Header/>
             <Text style={{fontSize: 25,color: COLORS.white}}>Lives</Text>
         </View>
     );
@@ -11,8 +13,6 @@ function LivesScreen(){
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: COLORS.secondary,
     }
 });
