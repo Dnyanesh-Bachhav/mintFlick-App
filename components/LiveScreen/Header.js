@@ -3,6 +3,7 @@ import cover from "../../assets/cover.png";
 import monkey_asset from "../../assets/monkey_asset.png";
 import { Ionicons } from '@expo/vector-icons';
 import { COLORS } from "../constants";
+// Live Screen
 function Header(){
     return(
         <View style={styles.container} >
