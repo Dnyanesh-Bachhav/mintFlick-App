@@ -7,6 +7,11 @@ import pubg from "../assets/pubg.jpg";
 import suyog from "../assets/photo_3_circular.png";
 import Android from "../assets/Android.png";
 import Jetpack from "../assets/Jetpack.png";
+import bgmi from "../assets/bgmi.jpg";
+import fall_guys from "../assets/fall_guys.jpg";
+import fifa from "../assets/fifa.png";
+import fortnite from "../assets/fortnite.jpg";
+import rocket_league from "../assets/rocket_league.jpg";
 const COLORS = {
     primary: "#0f172a",
     secondary: "#1e293b",
@@ -62,6 +67,34 @@ const POST_DATA = [
         commentCount: 4
     }
 ]
+const CATEGORIES_IMAGES = [
+    {
+        img_src: "https://v2.mintflick.app/static/media/Bgmi.debabba9c3f464d19dfd.jpg",
+        data: "Battleground Mobile India"
+    },
+    {
+        img_src: "https://v2.mintflick.app/static/media/fallguys.e3dafcf517c07d54df59.webp",
+        data: "Fall Guys"
+    },
+    {
+        img_src: "https://v2.mintflick.app/static/media/Fifa.8aa47c1e52f734733c70.webp",
+        data: "FIFA 2023"
+    },
+    {
+        img_src: "https://v2.mintflick.app/static/media/Fortnite.f956f111dfcd40be0aca.jpg",
+        data: "Fortnite"
+    },
+    {
+        img_src: "https://v2.mintflick.app/static/media/Fortnite.f956f111dfcd40be0aca.jpg",
+        data: "God Of War"
+    }
+];
+
+export { COLORS, POST_DATA, CATEGORIES_IMAGES };
 
 
-export { COLORS, POST_DATA };
+
+
+
+
+

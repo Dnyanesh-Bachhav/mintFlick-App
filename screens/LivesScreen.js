@@ -8,13 +8,18 @@ function LivesScreen(){
         <View style={styles.container}>
             <Header/>
             <Text style={{fontSize: 25,color: COLORS.white}}>Lives</Text>
-            <Categories/>
+            <View className="" style={styles.cardContainer}>
+                <Text>Categories you'd like</Text>
+                <Categories/>
+            </View>
         </View>
     );
 }
 const styles = StyleSheet.create({
     container:{
         flex: 1,
+    },
+    cardContainer:{
         backgroundColor: COLORS.secondary,
     }
 });
